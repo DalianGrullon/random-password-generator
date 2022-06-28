@@ -19,23 +19,19 @@
         characterCount = number
         lowerCase = {
             use: true/false,
-            characters: "abcdefghijklmnopqrstuvwxyz",
-            characterLength: characters.length
+            characters: "abcdefghijklmnopqrstuvwxyz"
         }
         upperCase = {
             use: true/false,
             characters: lowerCase.characters.toUpperCase()
-            characterLength: characters.length
         }
         numeric = {
             use: true/false
             characters: "0123456789"
-            characterLength: characters.length
         }
         specialCharacter = {
             use: true/false
             characters: " !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
-            characterLength: characters.length
         }
         ```
     2. prompt for each criteria and validate input
@@ -49,7 +45,7 @@
         ```
         while (characterCount > 0) {
             if (character type is true) {
-                userPassword += object.characters.charAt(Math.floor(Math.Random() * object.characterLength));
+                userPassword += object.characters.charAt(Math.floor(Math.Random() * object.characters.length));
                 
                 characterCount--;
             }
